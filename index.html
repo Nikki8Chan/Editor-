@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Web Version</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" id="theme-stylesheet">
+</head>
+<body>
+    <div class="vscode-container">
+        <div class="sidebar">
+            <div class="sidebar-icons">
+                <div class="icon active">
+                    <i class="fas fa-file-code"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-git-alt"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <div class="tab active" data-tab="html">index.html</div>
+                <div class="tab" data-tab="css">styles.css</div>
+                <div class="tab" data-tab="js">script.js</div>
+                <div class="controls">
+                    <button class="theme-toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+                    <button class="save-button" onclick="saveCode()">Save Code</button>
+                    <button class="load-button" onclick="loadCode()">Load Code</button>
+                </div>
+            </div>
+            <div class="editor-container">
+                <div id="html" class="editor active">
+                    <pre class="code-editor"><code class="language-html"><textarea id="html-code" placeholder="HTML code"></textarea></code></pre>
+                </div>
+                <div id="css" class="editor">
+                    <pre class="code-editor"><code class="language-css"><textarea id="css-code" placeholder="CSS code"></textarea></code></pre>
+                </div>
+                <div id="js" class="editor">
+                    <pre class="code-editor"><code class="language-js"><textarea id="js-code" placeholder="JavaScript code"></textarea></code></pre>
+                </div>
+            </div>
+            <div class="output-container">
+                <iframe id="output" class="output"></iframe>
+                <div class="console">
+                    <h2>Console</h2>
+                    <pre id="console-output"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
+    <script src="script.js"></script>
+</body>
+</html>
